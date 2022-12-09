@@ -17,7 +17,7 @@ Latest release: TODO
 [deps.edn](https://clojure.org/guides/deps_and_cli) dependency information:
 
 ```
-org.clojure/tools.deps.alpha {:mvn/version "TODO"}
+org.clojure/tools.deps.cli {:mvn/version "TODO"}
 ```
 
 # Developer Information
