@@ -1,0 +1,15 @@
+{:paths ["src/main/clojure" "src/main/resources"]
+ :deps {
+   org.clojure/clojure {:mvn/version "1.11.1"}
+   org.clojure/tools.deps.alpha {:mvn/version "0.15.1254"}
+ }
+ :aliases {
+   ;; clj -M:lint
+   :lint {:replace-deps {clj-kondo/clj-kondo {:mvn/version "2022.12.08"}}
+          :main-opts ["-m" "clj-kondo.main" "--lint" "src/main/clojure" "--lint" "src/test/clojure"]}
+
+   ;; clj -M:outdated
+   :outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
+             :main-opts ["-m" "antq.core"]}
+ }
+}
