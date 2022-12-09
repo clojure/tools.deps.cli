@@ -10,14 +10,14 @@ Also see:
 
 # Release Information
 
-Latest release: TODO
+Latest release: 0.9.10
 
 * [All released versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.deps.cli%22)
 
 [deps.edn](https://clojure.org/guides/deps_and_cli) dependency information:
 
 ```
-org.clojure/tools.deps.cli {:mvn/version "TODO"}
+org.clojure/tools.deps.cli {:mvn/version "0.9.10"}
 ```
 
 # Developer Information

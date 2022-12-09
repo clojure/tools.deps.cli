@@ -1,5 +1,5 @@
 Changelog
 ===========
 
-* 0.9.x
-  * Split out of tools.deps.alpha
+* 0.9.10
+  * Split out of tools.deps.alpha and updated namespaces
