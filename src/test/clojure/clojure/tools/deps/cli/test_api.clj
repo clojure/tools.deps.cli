@@ -4,9 +4,9 @@
     [clojure.string :as str]
     [clojure.test :refer [deftest is] :as test]
     [clojure.tools.deps.cli.api :as api]
-    [clojure.tools.deps.alpha] ;; ensure extensions loaded
-    [clojure.tools.deps.alpha.util.maven :as mvn]
-    [clojure.tools.deps.alpha.util.dir :as dir])
+    [clojure.tools.deps] ;; ensure extensions loaded
+    [clojure.tools.deps.util.maven :as mvn]
+    [clojure.tools.deps.util.dir :as dir])
   (:import
     [java.io File]))
 
