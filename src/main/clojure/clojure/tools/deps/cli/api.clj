@@ -37,43 +37,75 @@
 
 (set! *warn-on-reflection* true)
 
-(defn basis
+(defn create-basis
   "Create a basis from a set of deps sources and a set of aliases. By default, use
-  root, user, and project deps and no argmaps (essentially the same classpath you get by
+  root, user, and project deps and no aliases (essentially the same classpath you get by
   default from the Clojure CLI).
 
-  Each dep source value can be :standard, a string path, a deps edn map, or nil.
-  Sources are merged in the order - :root, :user, :project, :extra.
+  Each dep source value can be :standard (same logic as Clojure CLI), a string path,
+  a deps edn map, or nil. Sources are merged in order of :root, :user, :project, :extra.
+
+  Options:
+   :root    - dep source, default = :standard
+   :user    - dep source, default = :standard
+   :project - dep source, default = :standard (\"./deps.edn\")
+   :extra   - dep source, default = nil
+   :aliases - coll of aliases of argmaps to apply to subprocesses
 
   Aliases refer to argmaps in the merged deps that will be supplied to the basis
   subprocesses (tool, resolve-deps, make-classpath-map).
 
-  The following subprocess argmap args can be provided:
-    Key                  Subproc             Description
-    :replace-deps        tool                Replace project deps
-    :replace-paths       tool                Replace project paths
-    :extra-deps          resolve-deps        Add additional deps
-    :override-deps       resolve-deps        Override coord of dep
-    :default-deps        resolve-deps        Provide coord if missing
-    :extra-paths         make-classpath-map  Add additional paths
-    :classpath-overrides make-classpath-map  Replace lib path in cp
-
-  Options:
-    :root    - dep source, default = :standard
-    :user    - dep source, default = :standard
-    :project - dep source, default = :standard (\"./deps.edn\")
-    :extra   - dep source, default = nil
-    :aliases - coll of aliases of argmaps to apply to subprocesses
-
-  Returns {:basis basis}, which basis is initial deps edn map plus these keys:
-    :resolve-args - the resolve args passed in, if any
-    :classpath-args - the classpath args passed in, if any
+  Returns basis, which is the initial deps edn map plus these keys:
+    :basis-args - dep and alias parameters used when creating the basis
     :libs - lib map, per resolve-deps
     :classpath - classpath map per make-classpath-map
     :classpath-roots - vector of paths in classpath order"
   [params]
-  (merge params
-    {:basis (deps/create-basis params)}))
+  (deps/create-basis params))
+
+(defn resolve-added-libs
+  "Given an existing map of current libs and a map of libs to add,
+   resolve and download the transitive set of libs that fulfill the
+   added libs and/or detect libs that conflict with the existing libs.
+   Results are printed as edn.
+
+   Keys in input map:
+     :existing - map of current lib to coord
+     :add - map of lib to coords to add
+     :procurer - procurer config from basis, if any
+
+   Returns a map of:
+     :added - map of added libs to resolved coords (has :paths)
+     :conflict - coll of requested libs that conflict with existing libs"
+  [{:keys [existing add procurer]}]
+  (let [add-canon (reduce-kv (fn [m k v] (conj m (ext/canonicalize k v procurer))) {} add)
+        combined (merge add-canon existing)  ;; existing coords override!
+        resolved (deps/resolve-deps (assoc procurer :deps combined) nil) ;; orig + add + transitive
+        orig-libs (-> existing keys set)
+        new-libs (-> resolved keys set)
+        added (select-keys resolved (vec (set/difference new-libs orig-libs)))
+        conflict (reduce-kv (fn [c lib add-coord]
+                              (if (zero? (ext/compare-versions lib add-coord (get resolved lib) procurer))
+                                c
+                                (conj c lib)))
+                            [] add-canon)
+        result (cond-> {}
+                 (pos? (count added)) (assoc :added added)
+                 (pos? (count conflict)) (assoc :conflict conflict))]
+    result))
+
+(comment
+  (def basis (deps/create-basis nil))
+  (def libs (:libs basis))
+  (def procurer (select-keys basis [:mvn/repos]))
+  (clojure.pprint/pprint (-> libs keys sort))
+  (get libs 'org.clojure/data.json)
+
+  (resolve-added-libs {:existing libs :add {'bites/bites {:mvn/version "0.3.9"} 'org.clojure/core.cache {:mvn/version "0.1.0"}} :procurer procurer})
+
+  (create-basis {:user nil :project nil :extra {:deps {'bites/bites {:mvn/version "0.3.9"}}}})
+  )
+
 
 (defn prep
   "Prep the unprepped libs found in the transitive lib set of basis.
