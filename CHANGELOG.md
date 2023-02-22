@@ -1,5 +1,5 @@
 Changelog
 ===========
 
-* 0.9.10
+* 0.9.10 on Dec 9, 2022
   * Split out of tools.deps.alpha and updated namespaces
