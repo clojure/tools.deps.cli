@@ -10,14 +10,14 @@ Also see:
 
 # Release Information
 
-Latest release: 0.9.17
+Latest release: 0.9.26
 
 * [All released versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.deps.cli%22)
 
 [deps.edn](https://clojure.org/guides/deps_and_cli) dependency information:
 
 ```
-org.clojure/tools.deps.cli {:mvn/version "0.9.17"}
+org.clojure/tools.deps.cli {:mvn/version "0.9.26"}
 ```
 
 # Developer Information
@@ -30,7 +30,7 @@ org.clojure/tools.deps.cli {:mvn/version "0.9.17"}
 
 # Copyright and License
 
-Copyright © 2017-2022 Rich Hickey, Alex Miller, and contributors
+Copyright © 2017-2023 Rich Hickey, Alex Miller, and contributors
 
 All rights reserved. The use and
 distribution terms for this software are covered by the
