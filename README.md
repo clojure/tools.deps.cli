@@ -25,8 +25,7 @@ org.clojure/tools.deps.cli {:mvn/version "0.9.35"}
 * [GitHub project](https://github.com/clojure/tools.deps.cli)
 * [How to contribute](https://clojure.org/community/contributing)
 * [Bug Tracker](https://clojure.atlassian.net/browse/TDEPS)
-* [Continuous Integration](https://build.clojure.org/job/tools.deps.cli/)
-* [Compatibility Test Matrix](https://build.clojure.org/job/tools.deps.cli-test-matrix/)
+* [Continuous Integration](https://github.com/clojure/tools.deps.cli/actions/workflows/test.yml)
 
 # Copyright and License
 
