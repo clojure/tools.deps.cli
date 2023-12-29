@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* next
+  * Update to latest tools.deps
 * 0.9.43 on May 31, 2023
   * Update to latest tools.deps
 * 0.9.35 on Mar 30, 2023
