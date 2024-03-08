@@ -5,19 +5,19 @@ Deps programs for use via the Clojure CLI. The Clojure CLI ships with a standard
 
 Also see:
 
-* [Deps and CLI Reference - Other programs](https://clojure.org/reference/deps_and_cli#_other_programs)
+* [Deps and CLI Reference - Other programs](https://clojure.org/reference/clojure_cli#programs)
 * [API](https://clojure.github.io/tools.deps.cli)
 
 # Release Information
 
-Latest release: 0.9.49
+Latest release: 0.10.55
 
 * [All released versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.deps.cli%22)
 
 [deps.edn](https://clojure.org/guides/deps_and_cli) dependency information:
 
 ```
-org.clojure/tools.deps.cli {:mvn/version "0.9.49"}
+org.clojure/tools.deps.cli {:mvn/version "0.10.55"}
 ```
 
 # Developer Information
@@ -29,7 +29,7 @@ org.clojure/tools.deps.cli {:mvn/version "0.9.49"}
 
 # Copyright and License
 
-Copyright © 2017-2023 Rich Hickey, Alex Miller, and contributors
+Copyright © Rich Hickey, Alex Miller, and contributors
 
 All rights reserved. The use and
 distribution terms for this software are covered by the
