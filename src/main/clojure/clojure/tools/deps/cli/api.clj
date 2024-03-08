@@ -50,6 +50,7 @@
     :log - :none, :info (default), or :debug
 
   Basis options:
+    :dir     - directory root path, defaults to current directory
     :root    - dep source, default = :standard
     :user    - dep source, default = :standard
     :project - dep source, default = :standard (\"./deps.edn\")
@@ -92,6 +93,7 @@
   A reason code for inclusion/exclusion may be added at the end of the line.
 
   Basis options:
+    :dir     - directory root path, defaults to current directory\n
     :root    - dep source, default = :standard
     :user    - dep source, default = :standard
     :project - dep source, default = :standard (\"./deps.edn\")
@@ -212,6 +214,7 @@
     :format    :print (default) or :edn
 
   Basis options:
+    :dir     - directory root path, defaults to current directory
     :root    - dep source, default = :standard
     :user    - dep source, default = :standard
     :project - dep source, default = :standard (\"./deps.edn\")
@@ -261,6 +264,7 @@
   Sources are merged in the order - :root, :user, :project, :extra.
 
   Basis options:
+    :dir     - directory root path, defaults to current directory
     :root    - dep source, default = :standard
     :user    - dep source, default = :standard
     :project - dep source, default = :standard (\"./deps.edn\")

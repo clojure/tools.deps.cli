@@ -1,6 +1,9 @@
 Changelog
 ===========
 
+* next on Mar 8, 2024
+  * Update to latest tools.deps and Clojure 1.11.2
+  * Add new :dir option to all programs that use create-basis
 * 0.9.49 on Dec 29, 2023
   * Update to latest tools.deps
 * 0.9.43 on May 31, 2023

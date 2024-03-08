@@ -20,7 +20,7 @@
   <properties>
     <!-- used for build -->
     <clojure.warnOnReflection>true</clojure.warnOnReflection>
-    <clojure.version>1.11.1</clojure.version>
+    <clojure.version>1.11.2</clojure.version>
   </properties>
 
   <dependencies>
@@ -32,7 +32,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>tools.deps</artifactId>
-      <version>0.18.1389</version>
+      <version>0.19.1411</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
