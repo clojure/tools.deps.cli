@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>clojure.tools.deps.cli.api - tools.deps.cli 0.9.44-SNAPSHOT API documentation</title>
+    <title>clojure.tools.deps.cli.api - tools.deps.cli 0.10.56-SNAPSHOT API documentation</title>
     <link rel="icon" href="static/favicon.png" />
     <link rel="shortcut icon" href="static/favicon.png" />
     <link rel="stylesheet" href="static/clojure.css" type="text/css" media="all" />
@@ -25,7 +25,7 @@ namespace.
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
-    <span class="toc-header"><span id="project-name">tools.deps.cli</span> <span id="version">0.9.44-SNAPSHOT</span> API</span><br />
+    <span class="toc-header"><span id="project-name">tools.deps.cli</span> <span id="version">0.10.56-SNAPSHOT</span> API</span><br />
     <ul>
       <li><a href="index.html" class="wiki_link">Overview</a></li>
       <li><a href="api-index.html" class="wiki_link">API Index</a></li>
@@ -90,7 +90,7 @@ namespace.
 </div>
 </div>
                 <div id="content-tag"><h1 id="overview">API for <span id="clojure.tools.deps.cli.api">clojure.tools.deps.cli.api</span>
-  - <span id="header-project">tools.deps.cli</span> <span id="header-version">0.9.44-SNAPSHOT</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
+  - <span id="header-project">tools.deps.cli</span> <span id="header-version">0.10.56-SNAPSHOT</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 
 <br />Full namespace name: <span id="long-name">clojure.tools.deps.cli.api</span>
@@ -135,7 +135,7 @@ The aliases are printed to the console.</pre>
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L139">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L141">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -154,7 +154,7 @@ Options:
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L379">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L383">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -166,7 +166,7 @@ Options:
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L249">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L252">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -195,6 +195,7 @@ Output mode options:
   :format    :print (default) or :edn
 
 Basis options:
+  :dir     - directory root path, defaults to current directory
   :root    - dep source, default = :standard
   :user    - dep source, default = :standard
   :project - dep source, default = :standard ("./deps.edn")
@@ -205,7 +206,7 @@ The libs are printed to the console.</pre>
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L193">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L195">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -238,7 +239,7 @@ Execute ad-hoc:
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L338">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L342">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -253,6 +254,7 @@ Each dep source value can be :standard, a string path, a deps edn map, or nil.
 Sources are merged in the order - :root, :user, :project, :extra.
 
 Basis options:
+  :dir     - directory root path, defaults to current directory
   :root    - dep source, default = :standard
   :user    - dep source, default = :standard
   :project - dep source, default = :standard ("./deps.edn")
@@ -264,7 +266,7 @@ Deprecated options (use the basis :aliases above instead):
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L256">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L259">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -284,6 +286,7 @@ Options:
   :log - :none, :info (default), or :debug
 
 Basis options:
+  :dir     - directory root path, defaults to current directory
   :root    - dep source, default = :standard
   :user    - dep source, default = :standard
   :project - dep source, default = :standard ("./deps.edn")
@@ -294,7 +297,7 @@ Returns params used.</pre>
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L40">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L40">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -316,6 +319,8 @@ In print mode, deps are printed with prefix of either . (included) or X (exclude
 A reason code for inclusion/exclusion may be added at the end of the line.
 
 Basis options:
+  :dir     - directory root path, defaults to current directory
+
   :root    - dep source, default = :standard
   :user    - dep source, default = :standard
   :project - dep source, default = :standard ("./deps.edn")
@@ -334,7 +339,7 @@ Print output mode modifiers:
     <pre id="var-specs"></pre>
     
     
-    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/883acb2bee0ea95e8cde50178de0c5dc63fe5079/src/main/clojure/clojure/tools/deps/cli/api.clj#L80">Source</a>
+    <a id="var-source" href="https://github.com/clojure/tools.deps.cli/blob/27aca000a178ed9714a385870fe914298d2540b3/src/main/clojure/clojure/tools/deps/cli/api.clj#L81">Source</a>
   </div>
 </div>
 
