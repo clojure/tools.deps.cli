@@ -93,7 +93,7 @@
   A reason code for inclusion/exclusion may be added at the end of the line.
 
   Basis options:
-    :dir     - directory root path, defaults to current directory\n
+    :dir     - directory root path, defaults to current directory
     :root    - dep source, default = :standard
     :user    - dep source, default = :standard
     :project - dep source, default = :standard (\"./deps.edn\")
