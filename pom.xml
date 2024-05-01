@@ -32,7 +32,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>tools.deps</artifactId>
-      <version>0.19.1421</version>
+      <version>0.19.1428</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
