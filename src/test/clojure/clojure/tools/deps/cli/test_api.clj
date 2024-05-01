@@ -21,6 +21,18 @@
      (binding [*test-dir* dir#]
        ~@body)))
 
+(deftest test-aliases-with-non-map-data
+  (with-test-dir
+    (let [p1deps (jio/file *test-dir* "p1/deps.edn")]
+      (jio/make-parents p1deps)
+      (spit p1deps
+        (pr-str {:aliases {:foo ["some" "data"]}}))
+
+      (dir/with-dir (jio/file *test-dir* "p1")
+        (let [output (with-out-str (api/aliases {:user nil}))]
+          (is (str/includes? output ":deps"))
+          (is (not (str/includes? output ":foo"))))))))
+
 (deftest test-prep-with-aliases
   (with-test-dir
     (let [p1deps (jio/file *test-dir* "p1/deps.edn")

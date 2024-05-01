@@ -167,7 +167,7 @@
                           (reduce-kv
                             (fn [a alias alias-defn]
                               (cond-> a
-                                (pos? (count (set/intersection cli-alias-keys (set (keys alias-defn)))))
+                                (pos? (count (set/intersection cli-alias-keys (when (map? alias-defn) (set (keys alias-defn))))))
                                 (assoc alias alias-defn)))
                             {} aliases)))
                       {} src-aliases)
