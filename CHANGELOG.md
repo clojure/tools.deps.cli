@@ -1,7 +1,7 @@
 Changelog
 ===========
 
-* next
+* 0.10.66 on May 1, 2024
   * aliases - ignore aliases with non-map data
   * Update to latest tools.deps
 * 0.10.61 on Apr 24, 2024
