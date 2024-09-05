@@ -1,7 +1,7 @@
 Changelog
 ===========
 
-* next
+* 0.11.72 on Sep 5, 2024
   * Update to latest Clojure and tools.deps
 * 0.10.66 on May 1, 2024
   * aliases - ignore aliases with non-map data
