@@ -1,6 +1,9 @@
 Changelog
 ===========
 
+* next
+  * TDEPS-268 - Return all procurer types from find-versions
+  * Update to latest tools.deps
 * 0.11.72 on Sep 5, 2024
   * Update to latest Clojure and tools.deps
 * 0.10.66 on May 1, 2024
