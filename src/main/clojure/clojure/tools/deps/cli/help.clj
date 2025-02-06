@@ -62,7 +62,7 @@
             (println ns-doc)
             (println))
           ;; Print function docs
-          (doseq [[k v] (->> my-ns ns-publics (sort-by key))]
+          (doseq [[_k v] (->> my-ns ns-publics (sort-by key))]
             (when (instance? clojure.lang.Fn @v)
               (#'repl/print-doc (meta v)))))))))
 
