@@ -1,7 +1,7 @@
 Changelog
 ===========
 
-* next
+* 0.11.86 on Feb 7, 2025
   * Update to latest tools.deps
 * 0.11.78 on Nov 21, 2024
   * TDEPS-268 - Return all procurer types from find-versions
