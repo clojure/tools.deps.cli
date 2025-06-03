@@ -1,6 +1,9 @@
 Changelog
 ===========
 
+* next
+  * Update to latest tools.deps and Clojure 1.12.1
+  * Update to latest clj-kondo and fix lint warnings
 * 0.11.86 on Feb 7, 2025
   * Update to latest tools.deps
 * 0.11.78 on Nov 21, 2024
