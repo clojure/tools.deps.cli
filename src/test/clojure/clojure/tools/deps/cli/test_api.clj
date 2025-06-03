@@ -11,7 +11,7 @@
   (:import
     [java.io File]))
 
-(def ^:dynamic ^File *test-dir*)
+(def ^:dynamic ^File *test-dir* nil)
 
 (defmacro with-test-dir
   [& body]
