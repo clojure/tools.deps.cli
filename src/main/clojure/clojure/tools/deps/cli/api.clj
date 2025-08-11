@@ -361,7 +361,7 @@
     :local-repo (optional) - path to local repo (default = ~/.m2/repository)
 
   Execute ad-hoc:
-    clj -X:deps mvn/install :jar '\"foo-1.2.3.jar\"'"
+    clj -X:deps mvn-install :jar '\"foo-1.2.3.jar\"'"
   [{:keys [jar pom lib version classifier local-repo]}]
   (println "Installing" jar (if pom (str "and " pom) ""))
   (let [{:keys [pom-file group-id artifact-id version classifier]}
