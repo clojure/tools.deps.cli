@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* next
+  * Update mvn-install docstring example
 * 0.11.93 on Jun 3, 2025
   * Update to latest tools.deps and Clojure 1.12.1
   * Update to latest clj-kondo and fix lint warnings
