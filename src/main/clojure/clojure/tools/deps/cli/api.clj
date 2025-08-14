@@ -37,6 +37,24 @@
 
 (set! *warn-on-reflection* true)
 
+(defn basis
+  "Print basis, by default using the same settings as the CLI for the current project.
+
+  Each dep source value can be :standard, a string path, a deps edn map, or nil.
+  Sources are merged in the order - :root, :user, :project, :extra.
+
+  Basis options:
+    :dir     - directory root path, defaults to current directory
+    :root    - dep source, default = :standard
+    :user    - dep source, default = :standard
+    :project - dep source, default = :standard (\"./deps.edn\")
+    :extra   - dep source, default = nil
+    :aliases - coll of kw aliases of argmaps to apply to subprocesses"
+  [opts]
+  (let [basis (deps/create-basis opts)]
+    (binding [*print-namespace-maps* false]
+      (pprint/pprint basis))))
+
 (defn prep
   "Prep the unprepped libs found in the transitive lib set of basis.
 
