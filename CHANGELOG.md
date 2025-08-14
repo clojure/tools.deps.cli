@@ -1,7 +1,7 @@
 Changelog
 ===========
 
-* next
+* 0.11.100 on Aug 14, 2025
   * TDEPS-264 - Add `basis` program
   * Update mvn-install docstring example
 * 0.11.93 on Jun 3, 2025
