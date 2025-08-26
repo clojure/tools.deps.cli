@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* 0.12.105 on Aug 26, 2025
+  * Update to Clojure 1.12.2 and latest tools.deps
 * 0.11.100 on Aug 14, 2025
   * TDEPS-264 - Add `basis` program
   * Update mvn-install docstring example
