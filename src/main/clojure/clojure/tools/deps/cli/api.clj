@@ -60,9 +60,11 @@
 
   This program accepts the same basis-modifying arguments from the `basis` program.
   Each dep source value can be :standard, a string path, a deps edn map, or nil.
-  Sources are merged in the order - :root, :user, :project, :extra.
+  Sources are merged in the order - :root, :user, :project, :extra. Alternately,
+  provide a :tool name to prep the libs for a tool.
 
   Options:
+    :tool - Tool name (symbol or string) to prep installed tool
     :force - flag on whether to force prepped libs to re-prep (default = false)
     :current - flag on whether to prep current project too (default = false)
     :log - :none, :info (default), or :debug
@@ -76,11 +78,16 @@
     :aliases - coll of kw aliases of argmaps to apply to subprocesses
 
   Returns params used."
-  [{:keys [force log current] :or {log :info, current false} :as params}]
-  (let [basis (deps/create-basis params)
-        opts {:action (if force :force :prep)
+  [{:keys [force log current tool] :or {log :info, current false} :as params}]
+  (let [opts {:action (if force :force :prep)
               :log log
-              :current current}]
+              :current current}
+        params (if tool
+                 (if-let [{:keys [lib coord]} (tool/resolve-tool (name tool))]
+                   {:project nil, :args {:deps {lib coord}}}
+                   (throw (ex-info (str "Unknown tool: " tool) {:tool tool})))
+                 params)
+        basis (deps/create-basis params)]
     (deps/prep-libs! (:libs basis) opts basis)
     params))
 
@@ -94,6 +101,13 @@
        :log :debug
        :force true})
     nil)
+
+  (do
+    (prep
+      {:root {:mvn/repos mvn/standard-repos, :deps nil}
+       :tool 'eden
+       :log :debug
+       :force true}))
   )
 
 (defn tree

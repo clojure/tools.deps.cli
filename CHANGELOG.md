@@ -1,6 +1,9 @@
 Changelog
 ===========
 
+* next 
+  * TDEPS-272 - `prep` now supports prep of named tool
+  * Update to latest deps
 * 0.12.105 on Aug 26, 2025
   * Update to Clojure 1.12.2 and latest tools.deps
 * 0.11.100 on Aug 14, 2025
