@@ -1,7 +1,7 @@
 Changelog
 ===========
 
-* next 
+* 0.12.110 on Sep 22, 2025
   * TDEPS-272 - `prep` now supports prep of named tool
   * Update to latest deps
 * 0.12.105 on Aug 26, 2025
