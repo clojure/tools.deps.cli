@@ -1,7 +1,7 @@
 {:paths ["src/main/clojure" "src/main/resources"]
  :deps {
-   org.clojure/clojure {:mvn/version "1.12.2"}
-   org.clojure/tools.deps {:mvn/version "0.25.1539"}
+   org.clojure/clojure {:mvn/version "1.12.3"}
+   org.clojure/tools.deps {:mvn/version "0.26.1549"}
  }
  :aliases {
    ;; clj -M:lint
