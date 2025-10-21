@@ -3,6 +3,7 @@
   <artifactId>tools.deps.cli</artifactId>
   <version>0.13.116-SNAPSHOT</version>
   <name>tools.deps.cli</name>
+  <description>Dependency programs for use via the Clojure CLI.</description>
 
   <parent>
     <groupId>org.clojure</groupId>
