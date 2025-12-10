@@ -10,14 +10,14 @@ Also see:
 
 # Release Information
 
-Latest release: 0.13.115
+Latest release: 0.14.121
 
 * [All released versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.deps.cli%22)
 
 [deps.edn](https://clojure.org/guides/deps_and_cli) dependency information:
 
 ```
-org.clojure/tools.deps.cli {:mvn/version "0.13.115"}
+org.clojure/tools.deps.cli {:mvn/version "0.14.121"}
 ```
 
 # Developer Information
