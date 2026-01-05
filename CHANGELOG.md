@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* 0.15.? on Jan 5, 2026
+  * Update to latest deps and parent pom
 * 0.14.121 on Dec 10, 2025
   * Update to latest Clojure and tools.deps
 * 0.13.115 on Sep 25, 2025
