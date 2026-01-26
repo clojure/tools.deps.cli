@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* next
+  * Update to latest deps and parent pom
 * 0.15.127 on Jan 5, 2026
   * Update to latest deps and parent pom
 * 0.14.121 on Dec 10, 2025
