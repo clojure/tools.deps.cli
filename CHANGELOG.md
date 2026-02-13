@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* 0.15.139 on Feb 12, 2026
+  * Update to latest deps
 * 0.15.135 on Feb 11, 2026
   * Update to latest deps
 * 0.15.131 on Jan 28, 2026
