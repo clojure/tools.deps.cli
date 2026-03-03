@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* 0.29.1598 on Mar 3, 2026
+  * Unintended release
 * 0.15.143 on Feb 27, 2026
   * Update to latest deps
 * 0.15.135 on Feb 11, 2026
