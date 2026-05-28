@@ -1,6 +1,8 @@
 Changelog
 ===========
 
+* 0.31.158 on May 28, 2026
+  * Update to latest tools.deps
 * 0.30.153 on May 13, 2026
   * Update to Clojure 1.12.5 and latest tools.deps
 * 0.30.149 on Mar 3, 2026
