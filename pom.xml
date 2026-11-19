@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.clojure</groupId>
     <artifactId>pom.contrib</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.5</version>
   </parent>
 
   <developers>
@@ -21,7 +21,7 @@
   <properties>
     <!-- used for build -->
     <clojure.warnOnReflection>true</clojure.warnOnReflection>
-    <clojure.version>1.12.6</clojure.version>
+    <clojure.version>1.12.7</clojure.version>
   </properties>
 
   <dependencies>
@@ -33,7 +33,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>tools.deps</artifactId>
-      <version>0.31.1646</version>
+      <version>0.32.1650</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
